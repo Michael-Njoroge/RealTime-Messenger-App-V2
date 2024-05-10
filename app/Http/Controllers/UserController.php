@@ -30,7 +30,7 @@ class UserController extends Controller
     {
         $user->update(['is_admin' => !(bool) $user->is_admin]);
 
-        $message = "User role was changed into " . ($user->is_admin ? '"Admin"' : '"Regular User"');
+        $message = 'User "' . $user->name . '" role was changed into ' . ($user->is_admin ? '"Admin"' : '"Regular User"');
         
         return response()->json(['message' => $message]);
     }
@@ -39,10 +39,10 @@ class UserController extends Controller
     {
         if($user->blocked_at){
             $user->blocked_at = null;
-            $message = 'Your account has been activated';
+            $message = 'User "' . $user->name . '" has been activated';
         }else{
             $user->blocked_at = now();
-            $message = 'Your account has been blocked';
+            $message = 'User "' . $user->name . '" has been blocked';
         }
 
         $user->save();
