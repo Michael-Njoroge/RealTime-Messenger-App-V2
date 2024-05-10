@@ -1,7 +1,24 @@
 <?php
 
 use Illuminate\Support\Facades\Broadcast;
+use App\Http\Resources\UserResource;
+use App\Models\User;
 
-Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
-    return (int) $user->id === (int) $id;
+Broadcast::channel('online', function (User $user) {
+    return $user ? new UserResource($user) : null;
+});
+
+//User channel
+Broadcast::channel('message.user.{userId1}-{userId2}',function(User $user, int $userId1, int $userId2){
+    return $user->id === $userId1 || $user->id === $userId2 ? $user : null;
+});
+
+//Group channel
+Broadcast::channel('message.group.{groupId}', function(User $user, int $groupId){
+    return $user->groups->contains('id',$groupId) ? $user : null;
+});
+
+//Group delete chaannel
+Broadcast::channel('group.deleted.{groupId}', function(User $user, int $groupId){
+    return $user->groups->contains('id',$groupId);
 });

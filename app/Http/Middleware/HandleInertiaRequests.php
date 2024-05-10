@@ -4,6 +4,9 @@ namespace App\Http\Middleware;
 
 use Illuminate\Http\Request;
 use Inertia\Middleware;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Resources\UserResource;
+use App\Models\Conversation;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -32,8 +35,9 @@ class HandleInertiaRequests extends Middleware
         return [
             ...parent::share($request),
             'auth' => [
-                'user' => $request->user(),
+                'user' => Auth::id() ? new UserResource($request->user()) : null,
             ],
+            'conversations' => Auth::id() ? Conversation::getConversationForSidebar(Auth::user()) : [],
         ];
     }
 }
