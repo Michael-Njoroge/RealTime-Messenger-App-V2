@@ -1,66 +1,41 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Mesa-Chat Messaging App
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Description
 
-## About Laravel
+This README showcases the screenshots of a sophisticated messaging application built using Laravel 11 and React Inertia.js. Leveraging Reverb as a WebSocket, the system ensures real-time communication with efficient background jobs and events handling.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Key Features:
+- **Admin and Regular Users:** The system distinguishes between administrators and regular users, empowering admins with privileges to manage users.
+- **User Management:** Administrators can effortlessly block or unblock users and create new user accounts.
+- **Group Communication:** Users have the ability to create groups, fostering collaborative environments within the app.
+- **Multimedia Support:** Beyond text messages, users can share attachments such as files and record audio, facilitated by a customized audio player.
+- **Interactive Emojis:** Integration with React allows for the seamless incorporation of emojis, enhancing the interactive experience for users.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+With its robust features and intuitive interface, this messaging app offers a versatile platform for seamless communication and collaboration.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Screenshots
 
-## Learning Laravel
+Here are some screenshots showcasing the features of our messaging app:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
-
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
-
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
-
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+![Login page](<Screenshots/s1.png>)
+![Forgot password page](<Screenshots/s2.png>)
+![Forgot password response](<Screenshots/s3.png>)
+![Dashboard page](<Screenshots/s4.png>)
+![Send message with attachments](<Screenshots/s5.png>)
+![React emojis intergration](<Screenshots/s6.png>)
+![Creation of users](<Screenshots/s7.png>)
+![Creation of users success](<Screenshots/s8.png>)
+![Group creation](<Screenshots/s9.png>)
+![Group creation success](<Screenshots/s10.png>)
+![Group details; description,users edit and delete](<Screenshots/s11.png>)
+![Group deletion scheduling](<Screenshots/s12.png>)
+![Group deletion after sometime](<Screenshots/s13.png>)
+![Blocking/suspending user's account](<Screenshots/s14.png>)
+![Unblocking/activating user's account](<Screenshots/s15.png>)
+![Changing user role to admin](<Screenshots/s16.png>)
+![Changing user role to regular user](<Screenshots/s17.png>)
+![User profile; upload photo,change name,email or password](<Screenshots/s18.png>)
+![User profile; upload photo,change name,email or password](<Screenshots/s19.png>)
+![Email sending after user is created with login credentials](<Screenshots/s20.png>)
+![Email sending after user account is suspended](<Screenshots/s21.png>)
+![Email sending after user account is activated](<Screenshots/s21.png>)

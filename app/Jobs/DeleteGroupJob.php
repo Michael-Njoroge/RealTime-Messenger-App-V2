@@ -17,7 +17,7 @@ class DeleteGroupJob implements ShouldQueue
     /**
      * Create a new job instance.
      */
-    public function __construct()
+    public function __construct(public Group $group)
     {
         //
     }
